@@ -19,6 +19,9 @@ public interface TodoDao {
     @Update
     void UpadteTodo(TodoItem item);
 
+    @Query("DELETE FROM Todo")
+    void deleteAllTodo();
+
     @Query("SELECT * FROM Todo")
     List<TodoItem> getAllTodo();
 
